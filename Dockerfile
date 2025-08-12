@@ -11,4 +11,5 @@ RUN mkdir -p /app/models /app/plots /app/data
 
 EXPOSE 5000
 
-CMD ["python", "scripts/test_api.py"]
+
+CMD ["uvicorn", "scripts.fastapi_app:app", "--host", "0.0.0.0", "--port", "5000"]
